@@ -59,8 +59,17 @@
     .section-note{color:var(--muted);font-size:12px;text-align:right;max-width:280px}
     .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     .overview-map{position:relative;padding:18px;overflow:hidden}
-    .overview-map svg{display:block;width:100%;height:auto;min-height:280px}
-    .map-caption{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:5px;color:var(--muted);font-size:11px}
+    .map-stage{position:relative;height:clamp(300px,42vw,390px);overflow:hidden;border-radius:18px;background:color-mix(in srgb,var(--paper-2) 58%,transparent);touch-action:none;user-select:none;cursor:grab;outline:none}
+    .map-stage.is-dragging{cursor:grabbing}
+    .map-stage:focus-visible{box-shadow:inset 0 0 0 2px var(--teal)}
+    .map-canvas{position:absolute;left:50%;top:50%;width:720px;height:350px;transform-origin:center;will-change:transform}
+    .map-canvas svg{display:block;width:720px;height:350px;pointer-events:none}
+    .map-controls{position:absolute;z-index:2;right:10px;top:10px;display:flex;gap:5px;padding:5px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--paper) 90%,transparent);box-shadow:0 6px 18px rgba(20,40,35,.10);backdrop-filter:blur(10px)}
+    .map-control{display:grid;place-items:center;min-width:34px;height:34px;padding:0 9px;border:0;border-radius:999px;background:transparent;color:var(--ink);font-weight:850;line-height:1;cursor:pointer}
+    .map-control:hover,.map-control:focus-visible{background:var(--paper-2);outline:none}
+    .map-control.reset{font-size:11px}
+    .map-hint{position:absolute;z-index:2;left:10px;bottom:10px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--paper) 88%,transparent);color:var(--muted);font-size:10px;font-weight:750;box-shadow:0 6px 18px rgba(20,40,35,.08);backdrop-filter:blur(10px);pointer-events:none}
+    .map-caption{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:13px;color:var(--muted);font-size:11px}
     .legend{display:inline-flex;align-items:center;gap:6px}
     .swatch{width:18px;height:3px;border-radius:99px;background:currentColor}
     .map-label{font-size:11px;font-weight:800;fill:var(--ink)}
@@ -138,10 +147,10 @@
       .wrap{width:min(100% - 20px,980px)}
       header{padding-top:14px}.focus{padding:21px 18px;border-radius:25px}.countdown{gap:6px}
       .bookings,.tips-grid{grid-template-columns:1fr}.packing{grid-column:auto}.packing-list{grid-template-columns:repeat(2,1fr)}
-      .section-note{display:none}.booking{padding:16px}.day-head{grid-template-columns:55px 1fr}.event{grid-template-columns:54px 17px 1fr}.event:not(:last-child):after{left:62px}
+      .section-note{display:none}.overview-map{padding:10px}.map-stage{height:310px}.booking{padding:16px}.day-head{grid-template-columns:55px 1fr}.event{grid-template-columns:54px 17px 1fr}.event:not(:last-child):after{left:62px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toast{transition:none}}
-    @media print{nav,.quick-actions,.route-box summary:after,.toast{display:none!important}body{background:#fff}.card{box-shadow:none;break-inside:avoid}.route-box .route-panel{display:block!important}section{break-inside:auto}}
+    @media print{nav,.quick-actions,.route-box summary:after,.toast,.map-controls,.map-hint{display:none!important}body{background:#fff}.card{box-shadow:none;break-inside:avoid}.route-box .route-panel{display:block!important}section{break-inside:auto}.map-stage{height:350px;overflow:visible;background:none}.map-canvas{transform:translate(-50%,-50%)!important}}
   </style>
 </head>
 <body>
@@ -185,7 +194,9 @@
     <section id="map">
       <div class="section-head"><div><span class="section-no">01</span><h2>行程总览地图</h2></div><div class="section-note">巴厘岛 → 努沙佩尼达 → 雅加达<br>每晚住宿已落位</div></div>
       <div class="card overview-map">
-        <svg viewBox="0 0 720 350" role="img" aria-label="印度尼西亚行程手绘路线图">
+        <div class="map-stage" id="overview-map-stage" tabindex="0" aria-label="可拖动和缩放的印度尼西亚行程总览地图" aria-describedby="map-help">
+          <div class="map-canvas" id="overview-map-canvas">
+          <svg viewBox="0 0 720 350" role="img" aria-label="印度尼西亚行程手绘路线图">
           <path class="island" d="M64 252c41-15 94-17 137-11 55 8 112 22 171 16 31-3 53 8 63 21-51 10-111 12-174 9-66-4-142-2-196-19-12-4-12-11-1-16Z"/>
           <path class="island" d="M456 163c27-18 62-24 92-11 13 6 30 10 42 5 1 14-10 24-23 31-22 11-49 16-72 12-24-4-45-20-39-37Z"/>
           <path class="island" d="M563 235c18-8 42-7 58 2 6 4 5 10-3 13-17 6-40 7-57 1-8-3-7-11 2-16Z"/>
@@ -202,7 +213,15 @@
           <path d="M90 72c64 5 124 2 183 14M74 89c83 7 165 2 240 11" fill="none" stroke="var(--line)" stroke-width="2" stroke-linecap="round"/>
           <text x="75" y="53" class="map-label" style="font-size:17px;font-family:Georgia,serif">Island notes, 2026</text>
           <text x="66" y="310" class="map-small">JAVA · 爪哇岛</text><text x="494" y="116" class="map-small">BALI · 巴厘岛</text>
-        </svg>
+          </svg>
+          </div>
+          <div class="map-controls" aria-label="地图控制">
+            <button class="map-control" type="button" data-map-action="zoom-out" aria-label="缩小地图">−</button>
+            <button class="map-control reset" type="button" data-map-action="reset" aria-label="复位地图">复位</button>
+            <button class="map-control" type="button" data-map-action="zoom-in" aria-label="放大地图">＋</button>
+          </div>
+          <div class="map-hint" id="map-help">单指或鼠标拖动 · 双指或滚轮缩放</div>
+        </div>
         <div class="map-caption">
           <span class="legend" style="color:var(--coral)"><i class="swatch"></i>10/2 登巴萨—佩尼达</span>
           <span class="legend" style="color:var(--sun)"><i class="swatch"></i>10/3—5 水明漾</span>
@@ -499,7 +518,80 @@
           else {await navigator.clipboard.writeText(location.href);toast('网址已复制');}
         } catch(e) { if(e.name!=='AbortError') toast('请复制浏览器地址分享'); }
       });
-      setTheme();tick();setInterval(tick,1000);setInterval(setTheme,60000);
+      const initOverviewMap = () => {
+        const stage=$('overview-map-stage'),canvas=$('overview-map-canvas');
+        if(!stage||!canvas)return;
+        const state={x:0,y:0,scale:1,pointers:new Map(),pinch:null};
+        const minScale=.82,maxScale=2.6;
+        const clamp=(value,min,max)=>Math.min(max,Math.max(min,value));
+        const keepInBounds=()=>{
+          const maxX=Math.max(72,(720*state.scale-stage.clientWidth)/2+72);
+          const maxY=Math.max(54,(350*state.scale-stage.clientHeight)/2+54);
+          state.x=clamp(state.x,-maxX,maxX);state.y=clamp(state.y,-maxY,maxY);
+        };
+        const render=()=>{
+          keepInBounds();
+          canvas.style.transform=`translate(calc(-50% + ${state.x}px),calc(-50% + ${state.y}px)) scale(${state.scale})`;
+        };
+        const zoomAt=(nextScale,clientX,clientY)=>{
+          const rect=stage.getBoundingClientRect();
+          const anchorX=(clientX??rect.left+rect.width/2)-(rect.left+rect.width/2);
+          const anchorY=(clientY??rect.top+rect.height/2)-(rect.top+rect.height/2);
+          const worldX=(anchorX-state.x)/state.scale,worldY=(anchorY-state.y)/state.scale;
+          state.scale=clamp(nextScale,minScale,maxScale);
+          state.x=anchorX-worldX*state.scale;state.y=anchorY-worldY*state.scale;
+          render();
+        };
+        const reset=()=>{state.x=0;state.y=0;state.scale=1;render();};
+        const beginPinch=()=>{
+          const points=[...state.pointers.values()].slice(0,2);
+          if(points.length<2)return;
+          const rect=stage.getBoundingClientRect();
+          const midX=(points[0].x+points[1].x)/2,midY=(points[0].y+points[1].y)/2;
+          state.pinch={distance:Math.hypot(points[1].x-points[0].x,points[1].y-points[0].y)||1,scale:state.scale,x:state.x,y:state.y,anchorX:midX-(rect.left+rect.width/2),anchorY:midY-(rect.top+rect.height/2)};
+        };
+        stage.addEventListener('pointerdown',event=>{
+          if(event.target.closest('button'))return;
+          stage.setPointerCapture(event.pointerId);
+          state.pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+          stage.classList.add('is-dragging');
+          if(state.pointers.size===2)beginPinch();
+        });
+        stage.addEventListener('pointermove',event=>{
+          const previous=state.pointers.get(event.pointerId);if(!previous)return;
+          state.pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+          if(state.pointers.size===1){state.x+=event.clientX-previous.x;state.y+=event.clientY-previous.y;render();return;}
+          if(state.pointers.size>=2&&state.pinch){
+            const points=[...state.pointers.values()].slice(0,2),rect=stage.getBoundingClientRect();
+            const distance=Math.hypot(points[1].x-points[0].x,points[1].y-points[0].y)||1;
+            const midX=(points[0].x+points[1].x)/2-(rect.left+rect.width/2),midY=(points[0].y+points[1].y)/2-(rect.top+rect.height/2);
+            const nextScale=clamp(state.pinch.scale*distance/state.pinch.distance,minScale,maxScale);
+            const worldX=(state.pinch.anchorX-state.pinch.x)/state.pinch.scale,worldY=(state.pinch.anchorY-state.pinch.y)/state.pinch.scale;
+            state.scale=nextScale;state.x=midX-worldX*nextScale;state.y=midY-worldY*nextScale;render();
+          }
+        });
+        const endPointer=event=>{
+          state.pointers.delete(event.pointerId);state.pinch=null;
+          if(state.pointers.size===0)stage.classList.remove('is-dragging');
+        };
+        stage.addEventListener('pointerup',endPointer);stage.addEventListener('pointercancel',endPointer);stage.addEventListener('lostpointercapture',endPointer);
+        stage.addEventListener('wheel',event=>{event.preventDefault();zoomAt(state.scale*(event.deltaY<0?1.12:.89),event.clientX,event.clientY);},{passive:false});
+        stage.addEventListener('dblclick',event=>zoomAt(state.scale*1.3,event.clientX,event.clientY));
+        stage.querySelector('.map-controls').addEventListener('click',event=>{
+          const action=event.target.closest('[data-map-action]')?.dataset.mapAction;if(!action)return;
+          if(action==='reset')reset();else zoomAt(state.scale*(action==='zoom-in'?1.2:.83));
+        });
+        stage.addEventListener('keydown',event=>{
+          const moves={ArrowLeft:[28,0],ArrowRight:[-28,0],ArrowUp:[0,28],ArrowDown:[0,-28]};
+          if(moves[event.key]){event.preventDefault();state.x+=moves[event.key][0];state.y+=moves[event.key][1];render();}
+          else if(event.key==='+'||event.key==='='){event.preventDefault();zoomAt(state.scale*1.2);}
+          else if(event.key==='-'){event.preventDefault();zoomAt(state.scale*.83);}
+          else if(event.key==='0'){event.preventDefault();reset();}
+        });
+        if('ResizeObserver'in window)new ResizeObserver(render).observe(stage);else window.addEventListener('resize',render);
+        reset();
+      };
+      initOverviewMap();setTheme();tick();setInterval(tick,1000);setInterval(setTheme,60000);
     })();
   </script>
 </body>
