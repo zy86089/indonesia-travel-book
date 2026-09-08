@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4efe5">
+  <meta name="description" content="4人印度尼西亚10日旅行手册：巴厘岛、努沙佩尼达与雅加达。">
+  <title>群岛之间｜印度尼西亚 10 日旅行手册</title>
+  <style>
+    :root{
+      --bg:#f4efe5;--paper:#fffaf1;--paper-2:#ede5d7;--ink:#17362f;--muted:#6c746d;
+      --line:rgba(23,54,47,.15);--teal:#177b68;--coral:#ec6d4d;--sun:#e9b949;--blue:#477cb8;
+      --shadow:0 18px 48px rgba(54,45,32,.10);--radius:24px;--safe:env(safe-area-inset-bottom,0px)
+    }
+    html[data-theme="night"]{
+      --bg:#101c1c;--paper:#172726;--paper-2:#213331;--ink:#eff5ea;--muted:#a9b6ae;
+      --line:rgba(238,245,234,.14);--teal:#6dcdb2;--coral:#ff8c6e;--sun:#f2c764;--blue:#8fb9e5;
+      --shadow:0 18px 48px rgba(0,0,0,.24)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{margin:0;background:
+      radial-gradient(circle at 7% 2%,rgba(233,185,73,.14),transparent 23rem),
+      radial-gradient(circle at 92% 12%,rgba(23,123,104,.10),transparent 26rem),var(--bg);
+      color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(100% - 28px,980px);margin:auto}
+    header{padding:22px 0 12px}
+    .mast{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.02em}
+    .brand-mark{width:38px;height:38px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;transform:rotate(-5deg)}
+    .brand-mark svg{width:23px;height:23px}
+    .trip-meta{font-size:12px;color:var(--muted);text-align:right}
+    .focus{position:relative;overflow:hidden;border-radius:30px;padding:25px;background:var(--ink);color:var(--paper);box-shadow:var(--shadow)}
+    html[data-theme="night"] .focus{background:#e9efe7;color:#142f2a}
+    .focus:after{content:"";position:absolute;width:190px;height:190px;border:1px dashed currentColor;border-radius:50%;right:-64px;top:-78px;opacity:.18}
+    .eyebrow{display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:800;opacity:.72}
+    .pulse{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 5px rgba(236,109,77,.18)}
+    .next-title{font-family:Georgia,"Songti SC",serif;font-size:clamp(24px,6vw,42px);line-height:1.18;margin:16px 0 7px;max-width:760px}
+    .next-time{font-size:13px;opacity:.72}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:24px;max-width:560px}
+    .count-item{border-top:1px solid rgba(255,255,255,.22);padding-top:10px}
+    html[data-theme="night"] .count-item{border-color:rgba(20,47,42,.22)}
+    .count-num{display:block;font-variant-numeric:tabular-nums;font-size:clamp(27px,8vw,52px);font-weight:850;letter-spacing:-.05em;line-height:1}
+    .count-label{font-size:11px;opacity:.62}
+    .quick-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+    .chip-btn{border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;border-radius:999px;padding:9px 13px;display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+    html[data-theme="night"] .chip-btn{border-color:rgba(20,47,42,.28)}
+    .chip-btn svg{width:16px;height:16px}
+    nav{position:sticky;top:8px;z-index:10;display:flex;overflow:auto;gap:7px;margin:13px 0 26px;padding:7px;background:color-mix(in srgb,var(--paper) 88%,transparent);border:1px solid var(--line);border-radius:999px;backdrop-filter:blur(14px);box-shadow:0 8px 24px rgba(20,40,35,.07);scrollbar-width:none}
+    nav::-webkit-scrollbar{display:none}
+    nav a{white-space:nowrap;font-size:13px;font-weight:700;padding:8px 12px;border-radius:999px}
+    nav a:first-child{background:var(--ink);color:var(--paper)}
+    section{scroll-margin-top:82px;margin:0 0 42px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}
+    h2{margin:0;font-family:Georgia,"Songti SC",serif;font-size:clamp(27px,6vw,38px);font-weight:700;letter-spacing:-.03em}
+    .section-no{color:var(--coral);font:700 12px/1 monospace}
+    .section-note{color:var(--muted);font-size:12px;text-align:right;max-width:280px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .overview-map{position:relative;padding:18px;overflow:hidden}
+    .overview-map svg{display:block;width:100%;height:auto;min-height:280px}
+    .map-caption{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:5px;color:var(--muted);font-size:11px}
+    .legend{display:inline-flex;align-items:center;gap:6px}
+    .swatch{width:18px;height:3px;border-radius:99px;background:currentColor}
+    .map-label{font-size:11px;font-weight:800;fill:var(--ink)}
+    .map-small{font-size:9px;fill:var(--muted)}
+    .island{fill:var(--paper-2);stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3 2}
+    .route{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+    .route-flight{stroke-dasharray:8 7}
+    .stay-dot{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+    .pin-dot{stroke:var(--paper);stroke-width:3}
+    .risk-strip{margin-top:12px;padding:14px 16px;border-radius:18px;background:color-mix(in srgb,var(--coral) 10%,var(--paper));border:1px solid color-mix(in srgb,var(--coral) 35%,transparent);font-size:13px}
+    .risk-strip strong{color:var(--coral)}
+    .bookings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .booking{padding:18px;display:flex;flex-direction:column;gap:13px}
+    .booking-top{display:flex;justify-content:space-between;gap:12px}
+    .booking-type{font-size:11px;font-weight:850;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
+    .confirmed{font-size:10px;font-weight:800;padding:4px 8px;border-radius:99px;background:rgba(23,123,104,.12);color:var(--teal);height:max-content}
+    .booking h3{font-size:18px;line-height:1.25;margin:4px 0 0}
+    .booking p{margin:0;color:var(--muted);font-size:13px}
+    .route-line{display:grid;grid-template-columns:58px 1fr;gap:8px;font-size:13px}
+    .route-line time{font-weight:850;font-variant-numeric:tabular-nums}
+    .route-line span{color:var(--muted)}
+    .contact-row{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:7px}
+    .mini-link,.place-link{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:750;background:transparent}
+    .mini-link:hover,.place-link:hover{border-color:var(--teal);color:var(--teal)}
+    .itinerary{display:grid;gap:13px}
+    .day{overflow:hidden}
+    .day-head{padding:19px 19px 14px;display:grid;grid-template-columns:62px 1fr;gap:12px;border-bottom:1px solid var(--line)}
+    .day-date{font-weight:900;font-size:20px;line-height:1}
+    .day-date small{display:block;font-size:10px;color:var(--muted);margin-top:7px;letter-spacing:.08em}
+    .day-title{font-family:Georgia,"Songti SC",serif;font-size:20px;font-weight:700;line-height:1.2}
+    .day-sub{font-size:12px;color:var(--muted);margin-top:5px}
+    details.route-box{border-bottom:1px solid var(--line)}
+    .route-box summary{list-style:none;cursor:pointer;padding:12px 19px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:800;color:var(--teal)}
+    .route-box summary::-webkit-details-marker{display:none}
+    .route-box summary:after{content:"＋";font-size:18px;font-weight:400}
+    .route-box[open] summary:after{content:"－"}
+    .route-panel{padding:0 18px 17px}
+    .route-panel svg{width:100%;height:auto;display:block;background:var(--paper-2);border-radius:16px;margin-bottom:10px}
+    .all-route{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;border-radius:14px;background:var(--ink);color:var(--paper);padding:10px;font-size:12px;font-weight:800}
+    .timeline{padding:5px 18px 17px}
+    .event{display:grid;grid-template-columns:62px 18px 1fr;gap:7px;position:relative;padding:11px 0}
+    .event:not(:last-child):after{content:"";position:absolute;left:70px;top:31px;bottom:-9px;border-left:1px dashed var(--line)}
+    .event time{font-variant-numeric:tabular-nums;font-size:12px;font-weight:850;padding-top:2px}
+    .event-dot{width:9px;height:9px;margin:5px 0 0 4px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 12%,transparent)}
+    .event-main{min-width:0}
+    .event-title{font-weight:800;font-size:14px;line-height:1.35}
+    .event-desc{font-size:12px;color:var(--muted);margin-top:4px}
+    .event-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .need-book{display:inline-block;margin-left:6px;color:#8c3d2b;background:rgba(236,109,77,.13);border:1px solid rgba(236,109,77,.28);padding:2px 6px;border-radius:6px;font-size:9px;font-weight:850;vertical-align:2px}
+    .optional{display:inline-block;margin-left:6px;color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,transparent);padding:2px 6px;border-radius:6px;font-size:9px;font-weight:850;vertical-align:2px}
+    .todo-list{list-style:none;margin:0;padding:7px 20px}
+    .todo-list li{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:start;padding:15px 0;border-bottom:1px solid var(--line)}
+    .todo-list li:last-child{border:0}
+    .todo-num{font:800 11px/24px monospace;color:var(--coral)}
+    .todo-title{font-weight:800;font-size:14px}
+    .todo-note{color:var(--muted);font-size:12px;margin-top:3px}
+    .priority{font-size:9px;font-weight:850;border-radius:99px;padding:5px 7px;background:var(--paper-2);white-space:nowrap}
+    .priority.now{color:#8c3d2b;background:rgba(236,109,77,.13)}
+    .tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .tip{padding:18px}
+    .tip-icon{font-size:22px;margin-bottom:12px}
+    .tip h3{margin:0 0 7px;font-size:15px}
+    .tip p,.tip li{color:var(--muted);font-size:12px}
+    .tip p{margin:0}
+    .tip ul{margin:0;padding-left:17px}
+    .packing{grid-column:span 2}
+    .packing-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;list-style:none;padding:0;margin:0}
+    .packing-list li{padding:10px;background:var(--paper-2);border-radius:12px;color:var(--ink);font-size:11px}
+    .source{display:inline-block;margin-top:8px;color:var(--teal);font-size:10px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+    footer{padding:4px 0 calc(38px + var(--safe));text-align:center;color:var(--muted);font-size:11px}
+    .offline-note{max-width:580px;margin:0 auto 18px;padding:13px;border:1px dashed var(--line);border-radius:14px}
+    .toast{position:fixed;left:50%;bottom:calc(20px + var(--safe));transform:translate(-50%,140%);z-index:30;background:var(--ink);color:var(--paper);padding:10px 15px;border-radius:999px;font-size:12px;transition:.25s;box-shadow:var(--shadow)}
+    .toast.show{transform:translate(-50%,0)}
+    @media(max-width:720px){
+      .wrap{width:min(100% - 20px,980px)}
+      header{padding-top:14px}.focus{padding:21px 18px;border-radius:25px}.countdown{gap:6px}
+      .bookings,.tips-grid{grid-template-columns:1fr}.packing{grid-column:auto}.packing-list{grid-template-columns:repeat(2,1fr)}
+      .section-note{display:none}.booking{padding:16px}.day-head{grid-template-columns:55px 1fr}.event{grid-template-columns:54px 17px 1fr}.event:not(:last-child):after{left:62px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toast{transition:none}}
+    @media print{nav,.quick-actions,.route-box summary:after,.toast{display:none!important}body{background:#fff}.card{box-shadow:none;break-inside:avoid}.route-box .route-panel{display:block!important}section{break-inside:auto}}
+  </style>
+</head>
+<body>
+  <header class="wrap" id="top">
+    <div class="mast">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 17c3-6 6-9 9-10 2 4 4 7 7 9-5-1-9 0-12 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/></svg>
+        </span>
+        <span>群岛之间</span>
+      </div>
+      <div class="trip-meta">4 人 · 10 天<br>2026.10.01—10.10</div>
+    </div>
+
+    <div class="focus" aria-live="polite">
+      <div class="eyebrow"><span class="pulse"></span>此刻关注</div>
+      <div class="next-title" id="next-title">北京首都机场 T2 集合</div>
+      <div class="next-time" id="next-time">2026-10-01 17:30 · 北京时间 UTC+8</div>
+      <div class="countdown" aria-label="距离下一个行程事件的倒计时">
+        <div class="count-item"><span class="count-num" id="cd-days">--</span><span class="count-label">天</span></div>
+        <div class="count-item"><span class="count-num" id="cd-hours">--</span><span class="count-label">时</span></div>
+        <div class="count-item"><span class="count-num" id="cd-minutes">--</span><span class="count-label">分</span></div>
+        <div class="count-item"><span class="count-num" id="cd-seconds">--</span><span class="count-label">秒</span></div>
+      </div>
+      <div class="quick-actions">
+        <button class="chip-btn" type="button" id="download-btn" aria-label="下载离线版旅行手册">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" stroke-linecap="round"/></svg>保存离线版
+        </button>
+        <button class="chip-btn" type="button" id="share-btn" aria-label="分享旅行手册">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="2.3"/><circle cx="6" cy="12" r="2.3"/><circle cx="18" cy="19" r="2.3"/><path d="m8 11 8-5M8 13l8 5"/></svg>分享
+        </button>
+      </div>
+    </div>
+
+    <nav aria-label="页面导航">
+      <a href="#top">此刻</a><a href="#map">路线</a><a href="#booked">已确认</a><a href="#days">逐日</a><a href="#todo">待办</a><a href="#tips">贴士</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="map">
+      <div class="section-head"><div><span class="section-no">01</span><h2>行程总览地图</h2></div><div class="section-note">巴厘岛 → 努沙佩尼达 → 雅加达<br>每晚住宿已落位</div></div>
+      <div class="card overview-map">
+        <svg viewBox="0 0 720 350" role="img" aria-label="印度尼西亚行程手绘路线图">
+          <path class="island" d="M64 252c41-15 94-17 137-11 55 8 112 22 171 16 31-3 53 8 63 21-51 10-111 12-174 9-66-4-142-2-196-19-12-4-12-11-1-16Z"/>
+          <path class="island" d="M456 163c27-18 62-24 92-11 13 6 30 10 42 5 1 14-10 24-23 31-22 11-49 16-72 12-24-4-45-20-39-37Z"/>
+          <path class="island" d="M563 235c18-8 42-7 58 2 6 4 5 10-3 13-17 6-40 7-57 1-8-3-7-11 2-16Z"/>
+          <path class="route" d="M542 179C520 189 505 200 492 216" stroke="#ec6d4d"/>
+          <path class="route" d="M492 216C520 207 548 191 572 177" stroke="#e9b949"/>
+          <path class="route" d="M572 177C559 165 544 151 530 158" stroke="#177b68"/>
+          <path class="route route-flight" d="M530 158C425 165 300 214 204 265" stroke="#477cb8"/>
+          <circle class="pin-dot" cx="542" cy="179" r="7" fill="#ec6d4d"/><text x="552" y="176" class="map-label">DPS · 登巴萨</text><text x="552" y="190" class="map-small">10/2 抵达</text>
+          <circle class="pin-dot" cx="492" cy="216" r="7" fill="#ec6d4d"/><text x="438" y="241" class="map-label">努沙佩尼达</text>
+          <circle class="stay-dot" cx="483" cy="226" r="7"/><text x="422" y="258" class="map-small">10/2 住 1 晚</text>
+          <circle class="pin-dot" cx="572" cy="177" r="7" fill="#e9b949"/><text x="584" y="171" class="map-label">水明漾</text><text x="584" y="185" class="map-small">10/3—5 · 2 晚</text>
+          <circle class="pin-dot" cx="530" cy="158" r="7" fill="#177b68"/><text x="520" y="128" class="map-label">乌布</text><text x="508" y="141" class="map-small">10/5—7 · 2 晚</text>
+          <circle class="pin-dot" cx="204" cy="265" r="7" fill="#477cb8"/><text x="170" y="235" class="map-label">雅加达</text><text x="160" y="249" class="map-small">10/7—10 · 3 晚</text>
+          <path d="M90 72c64 5 124 2 183 14M74 89c83 7 165 2 240 11" fill="none" stroke="var(--line)" stroke-width="2" stroke-linecap="round"/>
+          <text x="75" y="53" class="map-label" style="font-size:17px;font-family:Georgia,serif">Island notes, 2026</text>
+          <text x="66" y="310" class="map-small">JAVA · 爪哇岛</text><text x="494" y="116" class="map-small">BALI · 巴厘岛</text>
+        </svg>
+        <div class="map-caption">
+          <span class="legend" style="color:var(--coral)"><i class="swatch"></i>10/2 登巴萨—佩尼达</span>
+          <span class="legend" style="color:var(--sun)"><i class="swatch"></i>10/3—5 水明漾</span>
+          <span class="legend" style="color:var(--teal)"><i class="swatch"></i>10/5—7 乌布</span>
+          <span class="legend" style="color:var(--blue)"><i class="swatch"></i>10/7—10 雅加达</span>
+        </div>
+      </div>
+      <div class="risk-strip"><strong>路线判断：</strong>整体顺路。唯一高压点是 10 月 3 日上午浮潜与 12:00 退房重叠，必须提前退房并把行李交酒店/司机或浮潜店保管；10 月 10 日不能等到 12:00 才从酒店出发。</div>
+    </section>
+
+    <section id="booked">
+      <div class="section-head"><div><span class="section-no">02</span><h2>已确认</h2></div><div class="section-note">仅展示出行所需信息<br>不含确认号、证件号与房号</div></div>
+      <div class="bookings">
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">国际机票 · 去程</div><h3>北京 → 香港 → 巴厘岛</h3></div><span class="confirmed">已出票</span></div>
+          <div class="route-line"><time>10/01<br>21:00</time><span>香港航空 HX337<br><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Beijing+Capital+International+Airport+Terminal+2">北京首都 T2 ↗</a></span></div>
+          <div class="route-line"><time>10/02<br>00:35</time><span>抵达香港国际 T1<br>联程中转 1 小时 25 分，行李直挂</span></div>
+          <div class="route-line"><time>02:00<br>07:05</time><span>香港航空 HX707<br>香港国际 T2 → <a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=I+Gusti+Ngurah+Rai+International+Airport">巴厘岛 DPS ↗</a></span></div>
+          <p>以上均为当地时间；北京、香港、巴厘岛均为 UTC+8。</p>
+        </article>
+
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">境内机票</div><h3>巴厘岛 → 雅加达</h3></div><span class="confirmed">已出票</span></div>
+          <div class="route-line"><time>10/07<br>18:30</time><span>NAM Air IN281<br><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=I+Gusti+Ngurah+Rai+International+Airport+Domestic+Terminal">DPS 国内 D ↗</a></span></div>
+          <div class="route-line"><time>19:10</time><span><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Soekarno-Hatta+International+Airport+Terminal+1">雅加达 CGK T1 ↗</a><br>飞行 1 小时 40 分；雅加达慢 1 小时</span></div>
+          <p>巴厘岛 WITA 为 UTC+8；雅加达 WIB 为 UTC+7。</p>
+        </article>
+
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">国际机票 · 回程</div><h3>雅加达 → 香港 → 北京</h3></div><span class="confirmed">已出票</span></div>
+          <div class="route-line"><time>10/10<br>14:20</time><span>国泰航空 CX776<br><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Soekarno-Hatta+International+Airport+Terminal+3">雅加达 CGK T3 ↗</a></span></div>
+          <div class="route-line"><time>20:30</time><span>抵达香港国际 T1<br>联程中转 1 小时 25 分，行李直挂</span></div>
+          <div class="route-line"><time>21:55<br>01:25+1</time><span>国泰航空 CX340<br>香港国际 T1 → 北京首都 T3</span></div>
+        </article>
+
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">10/02—10/03 · 1 晚</div><h3>Giri Sea Cliff Penida Resort & Spa</h3></div><span class="confirmed">已确认</span></div>
+          <p>1 间豪华双人房 · 2 张双人床 · 4 份早餐<br>14:00—23:00 入住，12:00 前退房 · 订单标注无 Wi-Fi</p>
+          <p>Jl. Sentalkangin, Ped, Nusa Penida, Klungkung, Bali 80771</p>
+          <div class="contact-row"><a class="mini-link" href="tel:+6282317795387">☎ +62 823 1779 5387</a><a class="mini-link" href="https://www.google.com/maps/dir/?api=1&destination=Giri+Sea+Cliff+Penida+Resort+and+Spa">导航 ↗</a></div>
+        </article>
+
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">10/03—10/05 · 2 晚</div><h3>Desa Potato Head Bali</h3></div><span class="confirmed">已确认</span></div>
+          <p>2 间 Bamboo Studio · 每间 1 张大床、2 份早餐<br>15:00 入住，12:00 退房 · 不可取消</p>
+          <p>Jl. Petitenget No.51B, Seminyak, Bali 80361</p>
+          <div class="contact-row"><a class="mini-link" href="tel:+623616207979">☎ +62 361 620 7979</a><a class="mini-link" href="https://www.google.com/maps/dir/?api=1&destination=Desa+Potato+Head+Bali">导航 ↗</a></div>
+        </article>
+
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">10/05—10/07 · 2 晚</div><h3>Catu Mandala · 乌布别墅</h3></div><span class="confirmed">已确认</span></div>
+          <p>15:00 入住，12:00 退房<br>通过预订平台联系房东</p>
+          <p>Kutuh Kaja, G729+9FG, Jl. Tirta Tawar, Petulu, Ubud, Bali 80571</p>
+          <div class="contact-row"><a class="mini-link" href="https://www.google.com/maps/dir/?api=1&destination=G729%2B9FG+Jalan+Tirta+Tawar+Ubud">导航 ↗</a></div>
+        </article>
+
+        <article class="card booking">
+          <div class="booking-top"><div><div class="booking-type">10/07—10/10 · 3 晚</div><h3>The Langham, Jakarta</h3></div><span class="confirmed">已确认</span></div>
+          <p>2 间房 · 4 人<br>15:00 后入住，12:00 前退房</p>
+          <p>District 8, SCBD, Lot 28, Jakarta 12190</p>
+          <div class="contact-row"><a class="mini-link" href="tel:+622127087888">☎ +62 21 2708 7888</a><a class="mini-link" href="https://www.google.com/maps/dir/?api=1&destination=The+Langham+Jakarta">导航 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="days">
+      <div class="section-head"><div><span class="section-no">03</span><h2>逐日行程</h2></div><div class="section-note">时间在左，行动在右<br>点地点直接打开 Google 地图</div></div>
+      <div class="itinerary">
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/01<small>周四 · DAY 1</small></div><div><div class="day-title">北京出发，夜航去往群岛</div><div class="day-sub">北京时间 CST · UTC+8</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="北京至香港路线"><path d="M34 52c65-43 152-42 247-13" class="route route-flight" stroke="var(--coral)"/><circle cx="34" cy="52" r="6" fill="var(--coral)"/><circle cx="281" cy="39" r="6" fill="var(--coral)"/><text x="18" y="76" class="map-label">北京 PEK</text><text x="244" y="24" class="map-label">香港 HKG</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&destination=Beijing+Capital+International+Airport+Terminal+2">一键打开机场导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>17:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达北京首都机场 T2</div><div class="event-desc">国际航班建议预留约 3 小时；证件、eVisa、返程票放在随身包。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Beijing+Capital+International+Airport+Terminal+2">机场导航 ↗</a></div></div></div>
+            <div class="event"><time>21:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">HX337 起飞</div><div class="event-desc">北京首都 T2 → 香港国际 T1。</div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/02<small>周五 · DAY 2</small></div><div><div class="day-title">落地巴厘岛，上岛看精灵坠崖</div><div class="day-sub">巴厘岛 WITA · UTC+8 · 当日节奏偏紧</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="巴厘岛机场、Sanur、努沙佩尼达和精灵坠崖路线"><path d="M20 58C64 28 98 27 135 54S212 72 294 29" class="route" stroke="var(--coral)"/><g fill="var(--coral)"><circle cx="20" cy="58" r="5"/><circle cx="93" cy="38" r="5"/><circle cx="168" cy="64" r="5"/><circle cx="237" cy="53" r="5"/><circle cx="294" cy="29" r="5"/></g><text x="9" y="78" class="map-small">DPS</text><text x="72" y="24" class="map-small">Sanur</text><text x="143" y="83" class="map-small">Sampalan</text><text x="211" y="75" class="map-small">酒店</text><text x="260" y="18" class="map-small">Kelingking</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=I+Gusti+Ngurah+Rai+International+Airport&destination=Giri+Sea+Cliff+Penida+Resort+and+Spa&waypoints=Sanur+Harbour%7CSampalan+Harbour%7CKelingking+Beach">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>00:35</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达香港，联程转机</div><div class="event-desc">行李直挂；按转机标识从 T1 前往续程区域。</div></div></div>
+            <div class="event"><time>02:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">HX707 起飞</div><div class="event-desc">香港国际 T2 → 巴厘岛 DPS。</div></div></div>
+            <div class="event"><time>07:05</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达巴厘岛 DPS</div><div class="event-desc">预留 90—120 分钟入境与取行李；eVisa 仍需走移民检查。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=I+Gusti+Ngurah+Rai+International+Airport">机场位置 ↗</a></div></div></div>
+            <div class="event"><time>09:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">包车前往 Sanur 港<span class="need-book">需预约</span></div><div class="event-desc">正常约 45 分钟；遇入境排队或堵车立即联系船公司改签后续班次。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=I+Gusti+Ngurah+Rai+International+Airport&destination=Sanur+Harbour">陆路导航 ↗</a></div></div></div>
+            <div class="event"><time>10:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">快船 Sanur → Sampalan<span class="need-book">需预约</span></div><div class="event-desc">目标 10:30—11:00 班次，航程约 30—45 分钟；务必买可改签票并确认抵达 Sampalan。</div></div></div>
+            <div class="event"><time>12:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">酒店寄存行李、午餐</div><div class="event-desc">Sampalan 到酒店约 15—20 分钟；14:00 后正式入住。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Giri+Sea+Cliff+Penida+Resort+and+Spa">酒店导航 ↗</a></div></div></div>
+            <div class="event"><time>14:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">包车前往精灵坠崖<span class="need-book">需预约</span></div><div class="event-desc">单程约 50—70 分钟；只安排崖顶观景，不下陡峭山路，天黑前返程。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=Giri+Sea+Cliff+Penida+Resort+and+Spa&destination=Kelingking+Beach">景点导航 ↗</a></div></div></div>
+            <div class="event"><time>18:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">返回酒店休息</div><div class="event-desc">若前序延误超过 90 分钟，直接取消精灵坠崖，不夜间赶山路。</div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/03<small>周六 · DAY 3</small></div><div><div class="day-title">Manta Point 浮潜，回到水明漾</div><div class="day-sub">WITA · UTC+8 · 船班周末易满</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="酒店、浮潜港口、Sanur与水明漾路线"><path d="M28 42C80 71 111 26 160 46s84 30 136-12" class="route" stroke="var(--sun)"/><g fill="var(--sun)"><circle cx="28" cy="42" r="5"/><circle cx="91" cy="55" r="5"/><circle cx="160" cy="46" r="5"/><circle cx="227" cy="58" r="5"/><circle cx="296" cy="34" r="5"/></g><text x="15" y="25" class="map-small">酒店</text><text x="64" y="78" class="map-small">Toyapakeh</text><text x="142" y="28" class="map-small">浮潜</text><text x="207" y="81" class="map-small">Sanur</text><text x="268" y="19" class="map-small">水明漾</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=Giri+Sea+Cliff+Penida+Resort+and+Spa&destination=Desa+Potato+Head+Bali&waypoints=Toyapakeh+Harbour%7CBanjar+Nyuh+Harbour%7CSanur+Harbour">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>06:15</time><span class="event-dot"></span><div class="event-main"><div class="event-title">提前退房，行李交司机/店家保管</div><div class="event-desc">不要等到中午回酒店取行李，否则容易错过返程船。</div></div></div>
+            <div class="event"><time>07:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Manta Point 早班浮潜<span class="need-book">需预约</span></div><div class="event-desc">优先选 3 小时早班并确认集合港口、救生衣、保险、毛巾和行李寄存；看到蝠鲼不作保证。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Toyapakeh+Harbour+Nusa+Penida">集合港口 ↗</a></div></div></div>
+            <div class="event"><time>11:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">冲洗、午餐、取行李</div><div class="event-desc">若选择 07:30—12:30 的长班，返程船必须顺延到 14:30 或以后。</div></div></div>
+            <div class="event"><time>13:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">快船返回 Sanur<span class="need-book">需预约</span></div><div class="event-desc">班次受天气和海况影响；提前 20—30 分钟到港。</div></div></div>
+            <div class="event"><time>14:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">包车 Sanur → 水明漾<span class="need-book">需预约</span></div><div class="event-desc">通常 45—90 分钟，周六下午堵车可能更久。</div></div></div>
+            <div class="event"><time>15:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">入住 Desa Potato Head</div><div class="event-desc">放慢节奏，傍晚留在酒店看日落。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Desa+Potato+Head+Bali">酒店导航 ↗</a></div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/04<small>周日 · DAY 4</small></div><div><div class="day-title">水明漾：海边、SPA 与餐酒</div><div class="day-sub">WITA · UTC+8 · 以步行与短途打车为主</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="水明漾步行路线"><path d="M28 51c48-25 78 12 122-6s82-24 142 5" class="route" stroke="var(--sun)"/><g fill="var(--sun)"><circle cx="28" cy="51" r="5"/><circle cx="93" cy="53" r="5"/><circle cx="150" cy="45" r="5"/><circle cx="224" cy="34" r="5"/><circle cx="292" cy="50" r="5"/></g><text x="11" y="73" class="map-small">酒店</text><text x="73" y="75" class="map-small">咖啡</text><text x="130" y="27" class="map-small">SPA</text><text x="203" y="20" class="map-small">海滩</text><text x="272" y="73" class="map-small">晚餐</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=Desa+Potato+Head+Bali&destination=Bo+%26+Bun+Seminyak&waypoints=Baby+Revs+Seminyak%7CKOYA+Spa+Bali%7CPetitenget+Beach">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>08:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">酒店早餐与海边散步</div><div class="event-desc">早餐供应以酒店当日安排为准。</div></div></div>
+            <div class="event"><time>10:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Baby Revs 咖啡<span class="optional">可选</span></div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Baby+Revs+Seminyak+Bali">导航 ↗</a></div></div></div>
+            <div class="event"><time>13:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">SPA：AYUR / KOYA / RE 三选一<span class="need-book">建议预约</span></div><div class="event-desc">不要连续跨店；选酒店附近的一家，留足休息时间。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=KOYA+Spa+Bali">KOYA 地图 ↗</a></div></div></div>
+            <div class="event"><time>17:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Potato Head 海边日落</div><div class="event-desc">周日热门时段，住客也建议提前询问座位。</div></div></div>
+            <div class="event"><time>20:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Bo &amp; Bun 晚餐<span class="optional">可选</span></div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Bo+%26+Bun+Seminyak">导航 ↗</a></div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/05<small>周一 · DAY 5</small></div><div><div class="day-title">从海边到乌布</div><div class="day-sub">WITA · UTC+8 · Icon Bali 为可选绕行</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="水明漾、Sanur与乌布路线"><path d="M29 63C87 29 129 72 181 47s74-23 110-10" class="route" stroke="var(--teal)"/><g fill="var(--teal)"><circle cx="29" cy="63" r="5"/><circle cx="110" cy="52" r="5"/><circle cx="181" cy="47" r="5"/><circle cx="291" cy="37" r="5"/></g><text x="12" y="83" class="map-small">水明漾</text><text x="88" y="34" class="map-small">Icon Bali</text><text x="157" y="69" class="map-small">别墅</text><text x="264" y="22" class="map-small">乌布中心</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=Desa+Potato+Head+Bali&destination=Catu+Mandala+Ubud&waypoints=ICON+BALI+Mall%7CSeniman+Coffee+Ubud%7CUbud+Palace">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>10:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">退房，包车前往乌布<span class="need-book">需预约</span></div><div class="event-desc">如购物优先，可先绕到 Sanur 的 Icon Bali；它不在雅加达。</div></div></div>
+            <div class="event"><time>11:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Icon Bali<span class="optional">可选 2 小时</span></div><div class="event-desc">绕行会增加车程；若堵车明显，直接去乌布。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=ICON+BALI+Mall">导航 ↗</a></div></div></div>
+            <div class="event"><time>15:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">入住 Catu Mandala</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=G729%2B9FG+Jalan+Tirta+Tawar+Ubud">别墅导航 ↗</a></div></div></div>
+            <div class="event"><time>16:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Seniman Coffee → 乌布皇宫</div><div class="event-desc">两处相距约 400 米；皇宫礼仪性关闭时以现场为准。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=Seniman+Coffee+Ubud&destination=Ubud+Palace">步行导航 ↗</a></div></div></div>
+            <div class="event"><time>19:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Kebun Bistro 晚餐<span class="need-book">建议预约</span></div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Kebun+Bistro+Ubud">导航 ↗</a></div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/06<small>周二 · DAY 6</small></div><div><div class="day-title">乌布的瀑布与雨林</div><div class="day-sub">WITA · UTC+8 · 不把远距离古树硬塞进同一天</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="乌布至 Tukad Cepung 和猴林路线"><path d="M24 51c57-38 106-29 142 2s72 23 131-15" class="route" stroke="var(--teal)"/><g fill="var(--teal)"><circle cx="24" cy="51" r="5"/><circle cx="102" cy="30" r="5"/><circle cx="166" cy="53" r="5"/><circle cx="231" cy="61" r="5"/><circle cx="297" cy="38" r="5"/></g><text x="8" y="72" class="map-small">别墅</text><text x="72" y="17" class="map-small">Tukad Cepung</text><text x="144" y="76" class="map-small">午餐</text><text x="207" y="82" class="map-small">猴林</text><text x="270" y="24" class="map-small">SPA</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=Catu+Mandala+Ubud&destination=Putri+Ubud+Spa+2&waypoints=Tukad+Cepung+Waterfall%7CPison+Ubud%7CSacred+Monkey+Forest+Sanctuary">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>07:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">包车前往 Tukad Cepung<span class="need-book">需预约包车</span></div><div class="event-desc">尽早出发避开人流；石阶湿滑，穿防滑鞋。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Tukad+Cepung+Waterfall">瀑布导航 ↗</a></div></div></div>
+            <div class="event"><time>11:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">返回乌布午餐</div><div class="event-desc">Pison、Sun Sun Warung 二选一，不跨区奔波。</div></div></div>
+            <div class="event"><time>14:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">圣猴森林</div><div class="event-desc">官方开放 09:00—18:00，最晚 17:00 入园；不要携带外露食物或逗猴。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Sacred+Monkey+Forest+Sanctuary">导航 ↗</a></div></div></div>
+            <div class="event"><time>16:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Putri Spa / Mango Mango<span class="optional">可选</span></div><div class="event-desc">按体力二选一；SPA 建议提前预约。</div></div></div>
+            <div class="event"><time>19:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">乌布晚餐</div><div class="event-desc">可选脏鸭饭或 Tukies Coconut 椰子冰淇淋。</div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/07<small>周三 · DAY 7</small></div><div><div class="day-title">离开乌布，飞往雅加达</div><div class="day-sub">WITA → WIB · 抵达后时钟拨慢 1 小时</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="乌布、巴厘岛机场、雅加达机场与朗廷酒店路线"><path d="M24 31C83 58 107 50 157 62" class="route" stroke="var(--teal)"/><path d="M157 62C202 20 250 19 294 45" class="route route-flight" stroke="var(--blue)"/><g><circle cx="24" cy="31" r="5" fill="var(--teal)"/><circle cx="157" cy="62" r="5" fill="var(--teal)"/><circle cx="245" cy="27" r="5" fill="var(--blue)"/><circle cx="294" cy="45" r="5" fill="var(--blue)"/></g><text x="9" y="17" class="map-small">乌布</text><text x="139" y="82" class="map-small">DPS</text><text x="224" y="16" class="map-small">CGK</text><text x="267" y="68" class="map-small">朗廷</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=Catu+Mandala+Ubud&destination=The+Langham+Jakarta&waypoints=I+Gusti+Ngurah+Rai+International+Airport%7CSoekarno-Hatta+International+Airport+Terminal+1">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>09:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">慢早餐、整理行李</div><div class="event-desc">当天不再安排远郊景点。</div></div></div>
+            <div class="event"><time>11:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">退房，包车前往 DPS<span class="need-book">需预约</span></div><div class="event-desc">乌布到机场常需 1.5—2.5 小时；预留堵车余量。</div></div></div>
+            <div class="event"><time>15:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达 DPS 国内航站楼</div><div class="event-desc">提前约 3 小时，给交通和国内值机留缓冲。</div></div></div>
+            <div class="event"><time>18:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">NAM Air IN281 起飞</div></div></div>
+            <div class="event"><time>19:10</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达雅加达 CGK T1</div><div class="event-desc">当地时间 WIB（UTC+7）；预约车辆接机。</div></div></div>
+            <div class="event"><time>21:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">入住 The Langham, Jakarta</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=Soekarno-Hatta+International+Airport+Terminal+1&destination=The+Langham+Jakarta">接机路线 ↗</a></div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/08<small>周四 · DAY 8</small></div><div><div class="day-title">SCBD 与 Blok M 的城市一面</div><div class="day-sub">雅加达 WIB · UTC+7 · 晚餐建议锁定 August</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="朗廷、Ashta、Fuglen、Blok M、August 路线"><path d="M25 53c50-29 86 16 131-8s84-18 139 1" class="route" stroke="var(--blue)"/><g fill="var(--blue)"><circle cx="25" cy="53" r="5"/><circle cx="86" cy="51" r="5"/><circle cx="156" cy="45" r="5"/><circle cx="230" cy="36" r="5"/><circle cx="295" cy="46" r="5"/></g><text x="9" y="75" class="map-small">朗廷</text><text x="65" y="72" class="map-small">Ashta</text><text x="137" y="26" class="map-small">Fuglen</text><text x="208" y="22" class="map-small">Blok M</text><text x="273" y="70" class="map-small">August</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=The+Langham+Jakarta&destination=August+Jakarta&waypoints=ASHTA+District+8%7CFuglen+Jakarta%7CBlok+M+Jakarta">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>10:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">ASHTA District 8 与 Fuglen</div><div class="event-desc">从酒店近距离开始，避免早高峰跨城。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=The+Langham+Jakarta&destination=Fuglen+Jakarta&waypoints=ASHTA+District+8">步行/打车导航 ↗</a></div></div></div>
+            <div class="event"><time>14:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Blok M 逛吃</div><div class="event-desc">Scarlett's House、Artirasa 二选一，留意返程晚高峰。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Blok+M+Jakarta">街区导航 ↗</a></div></div></div>
+            <div class="event"><time>19:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">August 晚餐<span class="need-book">必须预约</span></div><div class="event-desc">2026 亚洲 50 佳第 42 名、座位有限；本日晚餐符合其周二至周六营业安排。</div><div class="event-links"><a class="place-link" href="https://www.augustjakarta.com/reservation">官网预约 ↗</a><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=The+Langham+Jakarta&destination=August+Jakarta">导航 ↗</a></div></div></div>
+            <div class="event"><time>21:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Carrots Bar / Modernhaus<span class="optional">二选一</span></div><div class="event-desc">Carrots 以 walk-in 为主；Modernhaus 提前 WhatsApp 询位。</div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/09<small>周五 · DAY 9</small></div><div><div class="day-title">雅加达的咖啡、商场与松弛感</div><div class="day-sub">WIB · UTC+7 · 不安排跨城博物馆打卡</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="朗廷、Grand Indonesia、Giyanti 和 Kawa Wellness 路线"><path d="M23 48c58-34 109 24 156-2s74-21 118 0" class="route" stroke="var(--blue)"/><g fill="var(--blue)"><circle cx="23" cy="48" r="5"/><circle cx="102" cy="49" r="5"/><circle cx="179" cy="46" r="5"/><circle cx="243" cy="32" r="5"/><circle cx="297" cy="46" r="5"/></g><text x="8" y="70" class="map-small">朗廷</text><text x="70" y="72" class="map-small">Grand Indonesia</text><text x="156" y="69" class="map-small">Giyanti</text><text x="217" y="19" class="map-small">Kawa</text><text x="274" y="69" class="map-small">晚餐</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=The+Langham+Jakarta&destination=The+Langham+Jakarta&waypoints=Grand+Indonesia%7CGiyanti+Coffee+Roastery%7CKawa+Wellness+Jakarta">一键打开全天多点导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>10:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Grand Indonesia</div><div class="event-desc">集中购物与午餐；从 SCBD 出发预留堵车时间。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Grand+Indonesia">导航 ↗</a></div></div></div>
+            <div class="event"><time>14:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Giyanti Coffee<span class="optional">可选</span></div><div class="event-desc">不顺路时可直接留在商场，避免为了单店来回堵车。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&destination=Giyanti+Coffee+Roastery">导航 ↗</a></div></div></div>
+            <div class="event"><time>17:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">Kawa Wellness Spa<span class="need-book">建议预约</span></div></div></div>
+            <div class="event"><time>20:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">酒店附近晚餐与收拾行李</div><div class="event-desc">返程前一晚不再跨区；确认第二天 09:00 出发车辆。</div></div></div>
+          </div>
+        </article>
+
+        <article class="card day">
+          <div class="day-head"><div class="day-date">10/10<small>周六 · DAY 10</small></div><div><div class="day-title">返程：雅加达经香港回北京</div><div class="day-sub">WIB → HKT/CST · 不能按 12:00 最晚退房再走</div></div></div>
+          <details class="route-box"><summary>展开当日路线地图</summary><div class="route-panel"><svg viewBox="0 0 320 92" aria-label="朗廷、雅加达机场、香港机场、北京机场路线"><path d="M24 56C83 69 111 45 150 50" class="route" stroke="var(--blue)"/><path d="M150 50C204 5 255 22 298 41" class="route route-flight" stroke="var(--coral)"/><g><circle cx="24" cy="56" r="5" fill="var(--blue)"/><circle cx="150" cy="50" r="5" fill="var(--blue)"/><circle cx="231" cy="23" r="5" fill="var(--coral)"/><circle cx="298" cy="41" r="5" fill="var(--coral)"/></g><text x="8" y="77" class="map-small">朗廷</text><text x="130" y="72" class="map-small">CGK</text><text x="211" y="13" class="map-small">HKG</text><text x="276" y="64" class="map-small">PEK</text></svg><a class="all-route" href="https://www.google.com/maps/dir/?api=1&origin=The+Langham+Jakarta&destination=Soekarno-Hatta+International+Airport+Terminal+3">一键打开机场导航 ↗</a></div></details>
+          <div class="timeline">
+            <div class="event"><time>08:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">早餐、退房准备</div><div class="event-desc">前台结账不要拖到 12:00。</div></div></div>
+            <div class="event"><time>09:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">从朗廷出发前往 CGK T3<span class="need-book">需预约送机</span></div><div class="event-desc">酒店到机场约 30 km；无堵车约 30 分钟，但周六仍按 60—90 分钟预留。</div><div class="event-links"><a class="place-link" href="https://www.google.com/maps/dir/?api=1&origin=The+Langham+Jakarta&destination=Soekarno-Hatta+International+Airport+Terminal+3">送机导航 ↗</a></div></div></div>
+            <div class="event"><time>11:00</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达机场，办理国际值机</div></div></div>
+            <div class="event"><time>14:20</time><span class="event-dot"></span><div class="event-main"><div class="event-title">CX776 起飞</div></div></div>
+            <div class="event"><time>20:30</time><span class="event-dot"></span><div class="event-main"><div class="event-title">抵达香港，联程转机</div><div class="event-desc">行李直挂；中转 1 小时 25 分。</div></div></div>
+            <div class="event"><time>21:55</time><span class="event-dot"></span><div class="event-main"><div class="event-title">CX340 起飞</div><div class="event-desc">10 月 11 日 01:25 抵达北京首都 T3，当天休息。</div></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="todo">
+      <div class="section-head"><div><span class="section-no">04</span><h2>待办清单</h2></div><div class="section-note">四个人共用同一份清单<br>办完后直接更新页面</div></div>
+      <div class="card">
+        <ul class="todo-list">
+          <li><span class="todo-num">01</span><div><div class="todo-title">为 4 人申请印尼 eVisa / e-VOA</div><div class="todo-note">现在已进入可申请的 90 天窗口。逐人核对护照拼写；VPN 不是签证要求，网页打不开时先换网络或稍后重试。</div></div><span class="priority now">现在办</span></li>
+          <li><span class="todo-num">02</span><div><div class="todo-title">预订 Sanur ↔ 努沙佩尼达往返快船</div><div class="todo-note">去程目标 10/2 10:30—11:00 抵达 Sampalan；返程目标 10/3 13:00 或 14:30，选可改签票。</div></div><span class="priority now">现在办</span></li>
+          <li><span class="todo-num">03</span><div><div class="todo-title">预约 10/3 07:30 Manta Point 浮潜 · 4 人</div><div class="todo-note">确认是 Manta Point 而非 Manta Bay；询问时长、集合港口、保险、救生衣、行李寄存及恶劣海况退款。</div></div><span class="priority now">现在办</span></li>
+          <li><span class="todo-num">04</span><div><div class="todo-title">预订 10/2 佩尼达包车与司机</div><div class="todo-note">港口接送、酒店寄存、精灵坠崖往返打包询价。岛上道路狭窄，不建议把这里当首次骑摩托地点。</div></div><span class="priority">待询价</span></li>
+          <li><span class="todo-num">05</span><div><div class="todo-title">预订全程接送机与跨城车辆</div><div class="todo-note">DPS→Sanur、Sanur→水明漾、水明漾→乌布、乌布→DPS、CGK→朗廷、朗廷→CGK。</div></div><span class="priority">待询价</span></li>
+          <li><span class="todo-num">06</span><div><div class="todo-title">预约 August · 10/8 19:00 · 4 人</div><div class="todo-note">若十月尚未放位，设置提醒每周查看；备选 10/9 同时段。</div></div><span class="priority now">抢位</span></li>
+          <li><span class="todo-num">07</span><div><div class="todo-title">预约 SPA</div><div class="todo-note">10/4 水明漾选 AYUR、KOYA、RE 其中一家；10/9 雅加达可选 Kawa Wellness。</div></div><span class="priority">可稍后</span></li>
+          <li><span class="todo-num">08</span><div><div class="todo-title">确认住宿细节</div><div class="todo-note">向 Catu Mandala 索取准确门牌与入住方法；确认朗廷房型和早餐；向 Giri 确认 10/3 清晨退房与行李安排。</div></div><span class="priority">出发前</span></li>
+          <li><span class="todo-num">09</span><div><div class="todo-title">购买旅行保险与准备通信</div><div class="todo-note">保险需覆盖浮潜/潜水和船班取消；准备印尼流量卡或 eSIM，并安装 WhatsApp。</div></div><span class="priority">出发前</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="tips">
+      <div class="section-head"><div><span class="section-no">05</span><h2>实用贴士</h2></div><div class="section-note">离线内容照常可看<br>地图与外部预约需联网</div></div>
+      <div class="tips-grid">
+        <article class="card tip"><div class="tip-icon">🛂</div><h3>eVisa / e-VOA</h3><p>电子落地签自签发起 90 天内用于入境；通常可停留 30 天。护照入境时需有 6 个月以上有效期，并准备返程或续程票。eVisa 可省去落地付款柜台，但不能保证完全不用排队。</p><a class="source" href="https://evisa.imigrasi.go.id/web/visa-selection">印尼移民局官方申请 ↗</a></article>
+        <article class="card tip"><div class="tip-icon">🕰️</div><h3>时区不会算错</h3><p>北京、香港、巴厘岛均为 UTC+8；雅加达为 UTC+7。倒计时使用每个事件的固定时区时间戳，无论从哪个国家打开都指向同一时刻。</p></article>
+        <article class="card tip"><div class="tip-icon">🗓️</div><h3>节假日与售罄</h3><p>印尼政府公布的 2026 全国假期中，10 月 2—10 日没有全国法定假日或集体休假；但 10 月 3—4 日为周末，快船、浮潜和水明漾热门餐位仍有售罄风险。</p><a class="source" href="https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026">2026 官方假期 ↗</a></article>
+        <article class="card tip"><div class="tip-icon">🌊</div><h3>船与海况</h3><p>Sanur—佩尼达航程通常约 30—45 分钟，船班会因天气与海况调整。至少提前 20—30 分钟到港；穿易脱鞋，电子设备放防水袋。</p><a class="source" href="https://oceanspeedfastboat.com/price-schedule">船程参考 ↗</a></article>
+        <article class="card tip"><div class="tip-icon">🛵</div><h3>交通判断</h3><p>佩尼达道路窄、坡陡且部分路况粗糙，4 人更适合包车。巴厘岛与雅加达车程都高度受堵车影响；不要用地图的“无拥堵最快时间”压缩机场缓冲。</p></article>
+        <article class="card tip"><div class="tip-icon">🐒</div><h3>景点开放</h3><p>当前行程没有博物馆，因此不存在博物馆闭馆日冲突。圣猴森林每日 09:00—18:00、17:00 停止入园；精灵坠崖只看崖顶，不安排下到沙滩。</p><a class="source" href="https://monkeyforestubud.com/visit/">猴林官方信息 ↗</a></article>
+        <article class="card tip"><div class="tip-icon">💧</div><h3>饮水与健康</h3><p>不要直接饮用普通水龙头水；用瓶装水刷牙更稳妥。驱蚊液与防晒及时补涂。浮潜当天不饮酒；晕船药按药师或说明书提前服用。</p></article>
+        <article class="card tip"><div class="tip-icon">🔌</div><h3>电力与充电宝</h3><p>印尼常见两圆脚插座，准备 C/F 型转换头。充电宝必须随身携带、不可托运；容量标识要清晰，并以航空公司当日规定为准。</p></article>
+        <article class="card tip"><div class="tip-icon">💬</div><h3>联系与应急</h3><p>当地酒店、司机和餐厅普遍使用 WhatsApp。保存酒店电话和护照资料的离线副本；公开页面不保存私人手机号、订单号或证件号。</p></article>
+        <article class="card tip packing"><div class="tip-icon">🎒</div><h3>出发前准备</h3><ul class="packing-list"><li>两圆孔转换插头</li><li>常用药</li><li>一次性牙刷、牙膏</li><li>旅行装护发素</li><li>防晒用品</li><li>一次性内裤、浴巾</li><li>驱蚊液</li><li>手机防水袋</li><li>创可贴</li><li>充电宝（随身）</li><li>干纸巾、湿纸巾</li><li>可过滤花洒</li></ul></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="offline-note">这是单文件旅行手册。第一次联网打开后，点顶部“保存离线版”即可下载到手机；离线文件中倒计时、路线示意和全部文字仍可用，Google 地图与预约链接需要网络。</div>
+    <div>北京 · 香港 · 巴厘岛 · 努沙佩尼达 · 雅加达</div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    (() => {
+      const events = [
+        {at:'2026-10-01T17:30:00+08:00',title:'北京首都机场 T2 集合',label:'2026-10-01 17:30 · 北京时间 UTC+8'},
+        {at:'2026-10-01T21:00:00+08:00',title:'HX337 北京起飞',label:'2026-10-01 21:00 · 北京时间 UTC+8'},
+        {at:'2026-10-02T00:35:00+08:00',title:'抵达香港，开始联程转机',label:'2026-10-02 00:35 · 香港时间 UTC+8'},
+        {at:'2026-10-02T02:00:00+08:00',title:'HX707 香港起飞',label:'2026-10-02 02:00 · 香港时间 UTC+8'},
+        {at:'2026-10-02T07:05:00+08:00',title:'抵达巴厘岛 DPS',label:'2026-10-02 07:05 · 巴厘岛 WITA UTC+8'},
+        {at:'2026-10-02T10:30:00+08:00',title:'Sanur 快船前往努沙佩尼达',label:'2026-10-02 10:30 · 巴厘岛 WITA UTC+8'},
+        {at:'2026-10-02T14:30:00+08:00',title:'出发前往精灵坠崖',label:'2026-10-02 14:30 · 努沙佩尼达 WITA UTC+8'},
+        {at:'2026-10-03T07:30:00+08:00',title:'Manta Point 早班浮潜',label:'2026-10-03 07:30 · 努沙佩尼达 WITA UTC+8'},
+        {at:'2026-10-03T13:00:00+08:00',title:'快船返回 Sanur',label:'2026-10-03 13:00 · 巴厘岛 WITA UTC+8'},
+        {at:'2026-10-03T15:30:00+08:00',title:'入住 Desa Potato Head',label:'2026-10-03 15:30 · 水明漾 WITA UTC+8'},
+        {at:'2026-10-05T10:00:00+08:00',title:'从水明漾出发前往乌布',label:'2026-10-05 10:00 · 巴厘岛 WITA UTC+8'},
+        {at:'2026-10-05T15:00:00+08:00',title:'入住 Catu Mandala',label:'2026-10-05 15:00 · 乌布 WITA UTC+8'},
+        {at:'2026-10-06T07:30:00+08:00',title:'出发前往 Tukad Cepung',label:'2026-10-06 07:30 · 乌布 WITA UTC+8'},
+        {at:'2026-10-07T11:30:00+08:00',title:'从乌布出发前往 DPS',label:'2026-10-07 11:30 · 乌布 WITA UTC+8'},
+        {at:'2026-10-07T18:30:00+08:00',title:'IN281 飞往雅加达',label:'2026-10-07 18:30 · 巴厘岛 WITA UTC+8'},
+        {at:'2026-10-07T19:10:00+07:00',title:'抵达雅加达 CGK T1',label:'2026-10-07 19:10 · 雅加达 WIB UTC+7'},
+        {at:'2026-10-08T19:00:00+07:00',title:'August 晚餐',label:'2026-10-08 19:00 · 雅加达 WIB UTC+7'},
+        {at:'2026-10-10T09:00:00+07:00',title:'从朗廷出发前往机场',label:'2026-10-10 09:00 · 雅加达 WIB UTC+7'},
+        {at:'2026-10-10T14:20:00+07:00',title:'CX776 雅加达起飞',label:'2026-10-10 14:20 · 雅加达 WIB UTC+7'},
+        {at:'2026-10-10T20:30:00+08:00',title:'抵达香港，开始联程转机',label:'2026-10-10 20:30 · 香港时间 UTC+8'},
+        {at:'2026-10-10T21:55:00+08:00',title:'CX340 香港起飞',label:'2026-10-10 21:55 · 香港时间 UTC+8'},
+        {at:'2026-10-11T01:25:00+08:00',title:'抵达北京首都 T3',label:'2026-10-11 01:25 · 北京时间 UTC+8'}
+      ].map(item => ({...item,ms:new Date(item.at).getTime()}));
+      const $ = id => document.getElementById(id);
+      const pad = n => String(Math.max(0,n)).padStart(2,'0');
+      const setTheme = () => {
+        const h = new Date().getHours();
+        const night = h < 6 || h >= 18;
+        document.documentElement.dataset.theme = night ? 'night' : 'day';
+        document.querySelector('meta[name="theme-color"]').content = night ? '#101c1c' : '#f4efe5';
+      };
+      const tick = () => {
+        const now = Date.now();
+        const next = events.find(e => e.ms > now);
+        if (!next) {
+          $('next-title').textContent = '旅程结束，今天好好休息';
+          $('next-time').textContent = '2026-10-11 · 北京时间 UTC+8';
+          ['cd-days','cd-hours','cd-minutes','cd-seconds'].forEach(id => $(id).textContent = '00');
+          return;
+        }
+        let diff = Math.max(0,next.ms-now);
+        const days = Math.floor(diff/86400000); diff %= 86400000;
+        const hours = Math.floor(diff/3600000); diff %= 3600000;
+        const minutes = Math.floor(diff/60000); diff %= 60000;
+        const seconds = Math.floor(diff/1000);
+        $('next-title').textContent = next.title;
+        $('next-time').textContent = next.label;
+        $('cd-days').textContent = pad(days); $('cd-hours').textContent = pad(hours);
+        $('cd-minutes').textContent = pad(minutes); $('cd-seconds').textContent = pad(seconds);
+      };
+      const toast = msg => { const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200); };
+      $('download-btn').addEventListener('click',() => {
+        const html='<!doctype html>\n'+document.documentElement.outerHTML;
+        const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([html],{type:'text/html;charset=utf-8'}));
+        a.download='indonesia-trip-2026.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('离线版已开始下载');
+      });
+      $('share-btn').addEventListener('click',async() => {
+        try {
+          if(navigator.share){await navigator.share({title:document.title,text:'印度尼西亚 10 日旅行手册',url:location.href});}
+          else {await navigator.clipboard.writeText(location.href);toast('网址已复制');}
+        } catch(e) { if(e.name!=='AbortError') toast('请复制浏览器地址分享'); }
+      });
+      setTheme();tick();setInterval(tick,1000);setInterval(setTheme,60000);
+    })();
+  </script>
+</body>
+</html>
