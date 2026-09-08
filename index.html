@@ -141,6 +141,9 @@
     .packing{grid-column:span 2}
     .packing-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;list-style:none;padding:0;margin:0}
     .packing-list li{padding:10px;background:var(--paper-2);border-radius:12px;color:var(--ink);font-size:11px}
+    .top-packing{margin-top:13px;padding:18px}
+    .top-packing .tip-icon{margin-bottom:9px}
+    .top-packing[hidden],#packing-nav[hidden]{display:none}
     .source{display:inline-block;margin-top:8px;color:var(--teal);font-size:10px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
     footer{padding:4px 0 calc(38px + var(--safe));text-align:center;color:var(--muted);font-size:11px}
     .offline-note{max-width:580px;margin:0 auto 18px;padding:13px;border:1px dashed var(--line);border-radius:14px}
@@ -188,8 +191,13 @@
       </div>
     </div>
 
+    <article class="card tip packing top-packing" id="packing">
+      <div class="tip-icon">🎒</div><h3>出发前准备</h3>
+      <ul class="packing-list"><li>两圆孔转换插头</li><li>常用药</li><li>一次性牙刷、牙膏</li><li>旅行装护发素</li><li>防晒用品</li><li>一次性内裤、浴巾</li><li>驱蚊液</li><li>手机防水袋</li><li>创可贴</li><li>充电宝（随身）</li><li>干纸巾、湿纸巾</li><li>可过滤花洒</li></ul>
+    </article>
+
     <nav aria-label="页面导航">
-      <a href="#top">此刻</a><a href="#map">路线</a><a href="#booked">已确认</a><a href="#days">逐日</a><a href="#todo">待办</a><a href="#tips">贴士</a>
+      <a href="#top">此刻</a><a href="#packing" id="packing-nav">准备</a><a href="#map">路线</a><a href="#booked">已确认</a><a href="#days">逐日</a><a href="#todo">待办</a><a href="#tips">贴士</a>
     </nav>
   </header>
 
@@ -446,7 +454,6 @@
         <article class="card tip"><div class="tip-icon">💧</div><h3>饮水与健康</h3><p>不要直接饮用普通水龙头水；用瓶装水刷牙更稳妥。驱蚊液与防晒及时补涂。浮潜当天不饮酒；晕船药按药师或说明书提前服用。</p></article>
         <article class="card tip"><div class="tip-icon">🔌</div><h3>电力与充电宝</h3><p>印尼常见两圆脚插座，准备 C/F 型转换头。充电宝必须随身携带、不可托运；容量标识要清晰，并以航空公司当日规定为准。</p></article>
         <article class="card tip"><div class="tip-icon">💬</div><h3>联系与应急</h3><p>当地酒店、司机和餐厅普遍使用 WhatsApp。保存酒店电话和护照资料的离线副本；公开页面不保存私人手机号、订单号或证件号。</p></article>
-        <article class="card tip packing"><div class="tip-icon">🎒</div><h3>出发前准备</h3><ul class="packing-list"><li>两圆孔转换插头</li><li>常用药</li><li>一次性牙刷、牙膏</li><li>旅行装护发素</li><li>防晒用品</li><li>一次性内裤、浴巾</li><li>驱蚊液</li><li>手机防水袋</li><li>创可贴</li><li>充电宝（随身）</li><li>干纸巾、湿纸巾</li><li>可过滤花洒</li></ul></article>
       </div>
     </section>
   </main>
@@ -485,6 +492,7 @@
       ].map(item => ({...item,ms:new Date(item.at).getTime()}));
       const $ = id => document.getElementById(id);
       const pad = n => String(Math.max(0,n)).padStart(2,'0');
+      const tripStartMs = new Date('2026-10-01T17:30:00+08:00').getTime();
       const setTheme = () => {
         const h = new Date().getHours();
         const night = h < 6 || h >= 18;
@@ -493,6 +501,9 @@
       };
       const tick = () => {
         const now = Date.now();
+        const tripStarted = now >= tripStartMs;
+        $('packing').hidden = tripStarted;
+        $('packing-nav').hidden = tripStarted;
         const next = events.find(e => e.ms > now);
         if (!next) {
           $('next-title').textContent = '旅程结束，今天好好休息';
